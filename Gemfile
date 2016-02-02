@@ -55,7 +55,7 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-rescue'
   gem 'pry-state'
-  gem 'better_errors'
+  #  gem 'better_errors'
   gem 'rspec-rails', '~> 3.4.0'
   gem 'fuubar'
 end

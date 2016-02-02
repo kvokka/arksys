@@ -5,22 +5,27 @@
   </div>
   <div class="panel-body">
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-        <div class="form-group">
-          <%= f.label :Family %>
-          <%= f.text_field :family, autofocus: true, class: "form-control" %>
-        </div>
-        <div class="form-group">
-          <%= f.label :Name %>
-          <%= f.text_field :name, class: "form-control" %>
-        </div>
-        <div class="form-group">
-          <%= f.label :phone %>
-          <%= f.phone_field :phone, class: "form-control" %>
-        </div>
-        <div class="form-group">
+      <div class="form-group">
+        <%= f.label :Family %>
+        <%= f.text_field :family, autofocus: true, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :Name %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :phone %>
+        <%= f.phone_field :phone, class: "form-control" %>
+      </div>
+      <div class="form-group">
         <%= f.label :email %>
         <%= f.email_field :email,  class: "form-control" %>
       </div>
+      <div class="form-group">
+        <%= f.label :status %>
+        <%= f.select(:status,['active','inactive'], {},  {class: "form-control"}) %>
+      </div>
+
       <div class="form-group">
         <%= f.label :password %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it', :default => "leave blank if you don't want to change it") %>)</i><br />
         <%= f.password_field :password, :autocomplete => "off", class: "form-control" %>

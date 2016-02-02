@@ -1,0 +1,20 @@
+.ppanel.panel-default
+  .panel-body
+    = form_for(@user) do |f|
+      .form-group
+        = f.label :Family
+        = f.text_field :family, autofocus: true, class: "form-control"
+      .form-group
+        = f.label :Name
+        = f.text_field :name, class: "form-control"
+      .form-group
+        = f.label :phone
+        = f.phone_field :phone, class: "form-control"
+      .form-group
+        = f.label :email
+        = f.email_field :email,  class: "form-control"
+      .form-group
+        = f.label :status
+        = f.select(:status,['active','inactive'], {},  {class: "form-control"})
+      = f.submit 'Update', class: "btn btn-primary"
+= link_to t('.back', :default => 'Back'), :back

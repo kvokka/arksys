@@ -13,5 +13,8 @@ if defined? RSpec
     t.verbose = false
   end
 end
-require 'rubocop/rake_task'
-RuboCop::RakeTask.new
+
+if ENV['RAILS_ENV'] == 'test' || ENV['RAILS_ENV'] == 'development'
+  require 'rubocop/rake_task'
+  RuboCop::RakeTask.new
+end

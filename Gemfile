@@ -41,6 +41,7 @@ group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'web-console'
+  gem 'dotenv-heroku'
 end
 
 group :development, :test do

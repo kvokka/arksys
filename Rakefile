@@ -18,3 +18,5 @@ if ENV['RAILS_ENV'] == 'test' || ENV['RAILS_ENV'] == 'development'
   require 'rubocop/rake_task'
   RuboCop::RakeTask.new
 end
+
+require "dotenv-heroku/tasks"

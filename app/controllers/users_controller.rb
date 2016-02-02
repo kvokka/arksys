@@ -5,7 +5,8 @@ class UsersController < ApplicationController
   respond_to :html
 
   def index
-    respond_with @users = User.all
+    @users = User.all
+    respond_with @users
   end
 
   def destroy

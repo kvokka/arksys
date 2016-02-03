@@ -5,16 +5,12 @@ class UsersController < ApplicationController
   respond_to :html
 
   def index
-    @users = User.all
-    respond_with @users
+    respond_with @users = User.all
   end
 
   def destroy
     @user.destroy
     redirect_to users_path
-  end
-
-  def edit
   end
 
   def update
@@ -23,9 +19,6 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
-  end
-
-  def for_all
   end
 
   private

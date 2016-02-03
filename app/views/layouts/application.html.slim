@@ -28,7 +28,8 @@ html lang="en"
           a.navbar-brand href="."Arksys
           .navbar-collapse.collapse.navbar-responsive-collapse
             ul.nav.navbar-nav
-              li=link_to 'page_for_all', for_all_users_path
+              li=link_to 'page for everybody', for_all_users_path
+              li=link_to 'page for auth users', for_auth_users_path
               -if current_user
                 li= link_to "#{current_user.name}", users_path
                 li= link_to "Log out", destroy_user_session_path, :method => :delete

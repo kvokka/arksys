@@ -3,7 +3,9 @@
 USE Ruby 2.3.0
 
 devise & bootstrap used
-did not used scaffold
+responders gem add's dome magic
+did not used scaffold, as for real projects
+cover with unit tests (not enough complexity for acceptance tests, or i`ll test framework. all prepare for acceptance tests done.)
 
 
 Добрый день.

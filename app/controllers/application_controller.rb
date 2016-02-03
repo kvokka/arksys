@@ -25,13 +25,12 @@ class ApplicationController < ActionController::Base
   end
   protected :configure_permitted_parameters
 
-  def after_sign_in_path_for(resource)
-    if current_user&.status=='inactive'
-       reset_session
-       users_path
+  def after_sign_in_path_for(_resource)
+    if current_user&.status == 'inactive'
+      reset_session
+      users_path
     else
       for_auth_users_path
     end
   end
-
 end
